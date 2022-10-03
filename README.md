@@ -1,58 +1,103 @@
-# Job Portal
-Django Job Portal.    
-
-
-## Installation 
-
-```
-open terminal and type
-https://github.com/Sany07/Job-Portal.git
-
-or simply download using the url below
-https://github.com/Sany07/Job-Portal.git
-```
-
-## Install requirements
-
-```
-pip install -r requirements.txt
-```
-## Database
-
-```
-Set the database from settings.py
-```
-
-## To migrate the database open terminal in project directory and type
-```
-python manage.py makemigrations
-python manage.py migrate
-```
-
-## Collects all static files in your apps
-
-```
-python manage.py collectstatic
-```
-
-## Run the server
-```
-python manage.py runserver
-```
-
-![Settings Window](https://raw.github.com/Sany07/Django-Job-Portal/master/screenshots/screencapture-127-0-0-1-8000-2020-05-08-17_03_46.png)
-
-![Settings Window](https://raw.github.com/Sany07/Django-Job-Portal/master/screenshots/screencapture-127-0-0-1-8000-jobs-2020-05-08-17_40_01.png)
-
-![Settings Window](https://raw.github.com/Sany07/Django-Job-Portal/master/screenshots/screencapture-127-0-0-1-8000-job-79-2020-05-08-16_59_55.png)
-
-![Settings Window](https://raw.github.com/Sany07/Django-Job-Portal/master/screenshots/screencapture-127-0-0-1-8000-job-create-2020-05-08-17_00_46.png)
-
-![Settings Window](https://raw.github.com/Sany07/Django-Job-Portal/master/screenshots/screencapture-127-0-0-1-8000-dashboard-2020-05-08-17_01_07.png)
-
-![Settings Window](https://raw.github.com/Sany07/Django-Job-Portal/master/screenshots/screencapture-127-0-0-1-8000-dashboard-employer-job-54-applicants-2020-05-08-17_01_34.png)
-
 <div align="center">
-    <h3>========Thank You=========</h3>
+
+<img src="./screenshots/illustration.png" alt="Job Interview" width="300" height="356.5">
+
+# Django Job Portal
+
 </div>
 
+## Django Job Portal
+
+#### An open source online job portal.
+
+<p align="center">
+    <img alt="forks" src="https://img.shields.io/github/forks/manjurulhoque/django-job-portal?label=Forks&style=social"/>
+    <img alt="stars" src="https://img.shields.io/github/stars/manjurulhoque/django-job-portal?style=social"/>
+    <img alt="watchers" src="https://img.shields.io/github/watchers/manjurulhoque/django-job-portal?style=social"/>
+    <img alt="github Actions" src="https://github.com/manjurulhoque/django-job-portal/workflows/job-portal/badge.svg"/>
+</p>
+
+Live: [Demo](https://django-job.herokuapp.com/) or [Second Demo](http://jobs.manjurulhoque.com/)
+
+Used Tech Stack
+
+1. Django
+2. Sqlite
+
+### Screenshots
+
+## Home page
+<img src="screenshots/one.png" height="800">
+
+## Resume template page
+<img src="screenshots/six.png" height="800">
+<img src="screenshots/seven.png" height="800">
+
+## Login page
+<img src="screenshots/five.png" height="800">
+
+## Add new position as employer
+<img src="screenshots/two.png" height="800">
+
+## Job details
+<img src="screenshots/three.png" height="800">
+
+## Swagger API
+<img src="screenshots/four.png" height="800">
+
+<a name="local-venv"></a>
+### Local environment
+
+#### Install
+
+1. Create a virtual environment
+
+    `virtualenv venv`
+
+    Or
+
+    `python3.8 -m venv venv`
+
+2. Activate it
+
+    `source venv/bin/activate`
+
+3. Clone the repository and install the packages in the virtual env:
+
+    `pip install -r requirements.txt`
+
+4. Add `.env` file.
+
+    `cp .env.dev.sample .env`
+
+5. Add Github client ID and client secret in the `.env` file
+
+#### Run
+
+1.With the venv activate it, execute:
+
+    python manage.py collectstatic
+
+*Note* : Collect static is not necessary when debug is True (in dev mode)
+
+2. Create initial database:
+
+    `python manage.py migrate`
+
+
+3. Load demo data (optional):
+
+    `python manage.py loaddata fixtures/app_name_initial_data.json --app app.model_name`
+
+4. Run server:
+
+    `python manage.py runserver`
+
+
+#### Run test:
+``python manage.py test``
+
+#### To dump data:
+``python manage.py dumpdata --format=json --indent 4 app_name > app_name/fixtures/app_name_initial_data.json``
+
+Show your support by 🌟 the project!!
